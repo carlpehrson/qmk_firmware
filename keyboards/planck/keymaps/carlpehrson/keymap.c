@@ -96,24 +96,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {XXXXXXX,  KC_6,    KC_7,    KC_8,    KC_9,          NO_PIPE_MAC, NO_BSLS_MAC, KC_2,    KC_3,    KC_4,    KC_5,    NO_AE},
   {XXXXXXX,  XXXXXXX, KC_PERC, NO_TILD, LSFT(NO_ACUT), NO_LESS,     NO_GRTR,     KC_HASH, NO_CIRC, NO_GRTR, XXXXXXX, XXXXXXX}
 },
-
+#define ZM_IN LGUI(NO_PLUS)
+#define ZM_OUT LGUI(NO_MINS)
+#define COMNT LGUI(LSFT(KC_7))
+#define UINDT LALT(LGUI(KC_8))
+#define INDNT LALT(LGUI(KC_9))
 /* Lower
  * ,-----------------------------------------------------------------------------------.
  * |   ~  |   !  |   @  |   ?  |   $  |   %  |   &  |   1  |   2  |   3  |   4  | Del  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | Del  |  F1  |  F2  |  F3  | Com  |  F5  |  F6  |   5  |   6  |   7  |   8  |  9   |
+ * | Del  | uind |  ind |  F3  | Com  |  F5  |  F6  |   5  |   6  |   7  |   8  |  9   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |   0  |   Ö  |   Ä  |   Å  | 1pwd |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |   #  |  |   |   ^  |      |      |   [  |   ]  |      | ZmOut| Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
  */
-#define ZM_IN LGUI(NO_PLUS)
-#define ZM_OUT LGUI(NO_MINS)
-#define COMNT LGUI(LSFT(KC_7))
 [_LOWER] = {
   {NO_TILD, KC_EXLM,    NO_AT,   NO_QUES, NO_DLR,  KC_PERC, NO_AMPR, KC_1,    KC_2,    KC_3,    KC_4,    KC_DEL},
-  {KC_DEL,  KC_F1,      KC_F2,   KC_F3,   COMNT,   KC_F5,   KC_F6,   KC_5,    KC_6,    KC_7,    KC_8,    KC_9},
+  {KC_DEL,  UINDT,      INDNT,   KC_F3,   COMNT,   KC_F5,   KC_F6,   KC_5,    KC_6,    KC_7,    KC_8,    KC_9},
   {_______, KC_F7,      KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_0,    NO_OSLH, NO_AE,   NO_AA,   LGUI(NO_APOS)},
   {KC_HASH, NO_PIPE_MAC,NO_CIRC, _______, _______, NO_LBRC, NO_RBRC, _______, ZM_OUT,  KC_VOLD, KC_VOLU, KC_MPLY}
 },
