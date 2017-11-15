@@ -123,17 +123,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |   ´  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | Del  |   /  |   *  |   (  |   )  |  F5  |  F6  |   _  |   =  |   [  |   ]  |  \   |
+ * | Del  |   /  |   *  |   (  |   )  |  F5  |  F6  |   -  |   =  |   [  |   ]  |  \   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |   `  |   -  |   +  |   {  |   }  |  F11 |  F12 |   -  |   +  |Pg Up |Pg Dn |      |
+ * |   `  |   -  |   +  |   {  |   }  |  F11 |  F12 |   _  |   +  |Pg Up |Pg Dn |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |             |      | Next | Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = {
   {NO_ACUT,       KC_1,    KC_2,    KC_3,        KC_4,        KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC},
-  {KC_DEL,        NO_SLSH, NO_ASTR, NO_LPRN,     NO_RPRN,     KC_F5,   KC_F6,   NO_UNDS, NO_EQL,  NO_LBRC, NO_RBRC, NO_BSLS_MAC},
-  {LSFT(NO_ACUT), NO_MINS, NO_PLUS, NO_LCBR_MAC, NO_RCBR_MAC, KC_F11,  KC_F12,  NO_MINS, NO_PLUS, KC_PGUP, KC_PGDN, _______},
+  {KC_DEL,        NO_SLSH, NO_ASTR, NO_LPRN,     NO_RPRN,     KC_F5,   KC_F6,   NO_MINS, NO_EQL,  NO_LBRC, NO_RBRC, NO_BSLS_MAC},
+  {LSFT(NO_ACUT), NO_MINS, NO_PLUS, NO_LCBR_MAC, NO_RCBR_MAC, KC_F11,  KC_F12,  NO_UNDS, NO_PLUS, KC_PGUP, KC_PGDN, _______},
   {_______,       _______, _______, _______,     _______,     _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY}
 },
 
