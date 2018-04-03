@@ -101,6 +101,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #define COMNT LGUI(LSFT(KC_7))
 #define UINDT LALT(LGUI(KC_8))
 #define INDNT LALT(LGUI(KC_9))
+#define TPREV LALT(LGUI(KC_LEFT))
+#define TNEXT LALT(LGUI(KC_RGHT))
 /* Lower
  * ,-----------------------------------------------------------------------------------.
  * |   ~  |   !  |   @  |   ?  |   $  |   %  |   &  |   1  |   2  |   3  |   4  | Del  |
@@ -109,19 +111,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |   0  |   Ö  |   Ä  |   Å  | 1pwd |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |   #  |  |   |   ^  |      |      |   [  |   ]  |      | ZmOut| Vol- | Vol+ | Play |
+ * |   #  |  |   |   ^  |      |      | Tprv | Tnxt |      | ZmOut| Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = {
   {NO_TILD, KC_EXLM,    NO_AT,   NO_QUES, NO_DLR,  KC_PERC, NO_AMPR, KC_1,    KC_2,    KC_3,    KC_4,    KC_DEL},
   {KC_DEL,  UINDT,      INDNT,   NO_LESS, NO_GRTR, COMNT,   KC_F6,   KC_5,    KC_6,    KC_7,    KC_8,    KC_9},
   {_______, KC_F7,      KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_0,    NO_OSLH, NO_AE,   NO_AA,   LGUI(NO_APOS)},
-  {KC_HASH, NO_PIPE_MAC,NO_CIRC, _______, _______, NO_LBRC, NO_RBRC, _______, ZM_OUT,  KC_VOLD, KC_VOLU, KC_MPLY}
+  {KC_HASH, NO_PIPE_MAC,NO_CIRC, _______, _______, TPREV,   TNEXT,   _______, ZM_OUT,  KC_VOLD, KC_VOLU, KC_MPLY}
 },
 
 /* Raise
  * ,-----------------------------------------------------------------------------------.
- * |   ´  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
+ * |   ´  |   '  |   "  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * | Del  |   /  |   *  |   (  |   )  |  F5  |  F6  |   -  |   =  |   [  |   ]  |  \   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
@@ -131,7 +133,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = {
-  {NO_ACUT,       KC_1,    KC_2,    KC_3,        KC_4,        KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC},
+  {NO_ACUT,       NO_APOS, NO_QUO2, KC_3,        KC_4,        KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC},
   {KC_DEL,        NO_SLSH, NO_ASTR, NO_LPRN,     NO_RPRN,     KC_F5,   KC_F6,   NO_MINS, NO_EQL,  NO_LBRC, NO_RBRC, NO_BSLS_MAC},
   {LSFT(NO_ACUT), NO_MINS, NO_PLUS, NO_LCBR_MAC, NO_RCBR_MAC, KC_F11,  KC_F12,  NO_UNDS, NO_PLUS, KC_PGUP, KC_PGDN, _______},
   {_______,       _______, _______, _______,     _______,     _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY}
