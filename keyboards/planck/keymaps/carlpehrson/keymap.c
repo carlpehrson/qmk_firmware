@@ -68,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |   ´  |   1  |   2  |   3  |   4  |   5  |   6  |   7     8  |   9  |   0   | Del  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |   `  |   /  |   *  |   (  |   )  |  F5  |   &  |Right |   =  |  Up  | Down |  \   |
+ * |   `  |   /  |   *  |   (  |   )  |   "  |   &  |Right |   =  |  Up  | Down |  \   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |   -  |   +  |   {  |   }  |   ^  |  F12 |   _  |   +  |Pg Up |Pg Dn |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -77,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_RAISE] = {
   {NO_ACUT,       KC_1,   KC_2,     KC_3,        KC_4,        KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL},
-  {LSFT(NO_ACUT), NO_SLSH, NO_ASTR, NO_LPRN,     NO_RPRN,     KC_F5,   NO_AMPR, KC_RGHT, NO_EQL,  KC_UP,   KC_DOWN, NO_BSLS_MAC},
+  {LSFT(NO_ACUT), NO_SLSH, NO_ASTR, NO_LPRN,     NO_RPRN,     KC_QUOT, NO_AMPR, KC_RGHT, NO_EQL,  KC_UP,   KC_DOWN, NO_BSLS_MAC},
   {_______,       NO_MINS, NO_PLUS, NO_LCBR_MAC, NO_RCBR_MAC, NO_CIRC, KC_F12,  NO_UNDS, NO_PLUS, KC_PGUP, KC_PGDN, _______},
   {_______,       _______, _______, _______,     _______,     TPREV,   _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY}
 },
