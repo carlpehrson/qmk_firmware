@@ -11,15 +11,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |   =    |   1  |   2  |   3  |   4  |   5  | LEFT |           | RIGHT|   6  |   7  |   8  |   9  |   0  | Backspc|
+ * | Esc    |   1  |   2  |   3  |   4  |   5  | LEFT |           | RIGHT|   6  |   7  |   8  |   9  |   0  | Backspc|
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * | Tab    |   Q  |   D  |   R  |   W  |   B  |  L1  |           |  L2  |   J  |   F  |   U  |   P  |   Å  |   Ä    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | Ctrl   |   A  |   S  |   H  |   T  |   G  |------|           |------|   Y  |   N  |   E  |   O  |   I  |   Ö    |
- * |--------+------+------+------+------+------|  Cmd |           | Meh  |------+------+------+------+------+--------|
- * | LShift |   Z  |   X  |   M  |   C  |   V  |      |           |      |   K  |   L  |   <  |   ,  |   .  |  ~L1   |
+ * |--------+------+------+------+------+------|  '   |           | Meh  |------+------+------+------+------+--------|
+ * | LShift |   Z  |   X  |   M  |   C  |   V  |      |           |      |   K  |   L  | </L1 |   ,  |   .  |  ~L1   |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |Grv/L1|   '  |  Alt | Left | Right|                                       |  Up  | Down |   [  |   ]  | ~L1  |
+ *   |Grv/L1|  Alt | Left | Right| Cmd  |                                       |  Up  | Down |   [  |   ]  | ~L1  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        | App  | End  |       | Alt  |Ctrl/Esc|
@@ -33,11 +33,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Otherwise, it needs KC_*
 [BASE] = LAYOUT_ergodox(  // layer 0 : default
         // left hand
-        KC_EQL,         KC_1,         KC_2,   KC_3,   KC_4,   KC_5,   KC_LEFT,
+        KC_ESC,         KC_1,         KC_2,   KC_3,   KC_4,   KC_5,   KC_LEFT,
         KC_TAB,         KC_Q,         KC_D,   KC_R,   KC_W,   KC_B,   TG(SYMB),
         KC_LCTL,        KC_A,         KC_S,   KC_H,   KC_T,   KC_G,
-        KC_LSFT,        KC_Z,         KC_X,   KC_M,   KC_C,   KC_V,   KC_LGUI,
-        LT(SYMB,KC_GRV),NO_APOS,      KC_LALT,KC_LEFT,KC_RGHT,
+        KC_LSFT,        KC_Z,         KC_X,   KC_M,   KC_C,   KC_V,   NO_APOS,
+        LT(SYMB,KC_GRV),KC_LALT,      KC_LEFT,KC_RGHT,KC_LGUI,
                                               ALT_T(KC_APP),  KC_END,
                                                               KC_HOME,
                                                KC_SPC,KC_BSPC,KC_ESC,
