@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,         KC_Q,         KC_D,   KC_R,   KC_W,   KC_B,   TG(SYMB),
         CTL_T(KC_ESC),  KC_A,         KC_S,   KC_H,   KC_T,   KC_G,
         KC_LSFT,        KC_Z,         KC_X,   KC_M,   KC_C,   KC_V,   NO_APOS,
-        LT(SYMB,KC_GRV),KC_LALT,      KC_LEFT,KC_RGHT,KC_LGUI,
+        LT(SYMB,KC_GRV),KC_LALT,      KC_LEFT,KC_RGHT,GUI_T(KC_RGHT),
                                               ALT_T(KC_APP),  KC_END,
                                                               KC_HOME,
                                                KC_SPC,KC_BSPC,KC_ESC,
@@ -61,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
      * |        |   ?  |   @  |   {  |   }  |   |  |      |           |      |   Up |   7  |   8  |   9  |   *  |   F12  |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |    -   |   _  |   $  |   (  |   )  |   `  |------|           |------|   ´  |   4  |   5  |   6  |   +  |        |
+     * |    -   |   _  |   $  |   (  |   )  |   `  |------|           |------|   0  |   =  |   5  |   !  |   +  |        |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
      * |        |   /  |   ^  |   [  |   ]  |   ~  |      |           |      |   &  |   1  |   2  |   3  |   \  |        |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -89,9 +89,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            // right hand
            KC_TRNS, KC_F6,   KC_F7,  KC_F8,   KC_F9,   KC_F10,     KC_F11,
            KC_TRNS, KC_UP,   KC_7,   KC_8,    KC_9,    NO_ASTR,    KC_F12,
-                    NO_ACUT, KC_4,   KC_5,    KC_6,    NO_PLUS,    KC_TRNS,
+                    NO_EQL,  KC_0,   KC_5,    KC_EXLM, NO_PLUS,    KC_TRNS,
            KC_TRNS, NO_AMPR, KC_1,   KC_2,    KC_3,    NO_BSLS_MAC,KC_TRNS,
-                             KC_TRNS,KC_DOT,  KC_0,    KC_EQL,  KC_TRNS,
+                             KC_TRNS,KC_DOT,  KC_0,    NO_EQL,  KC_TRNS,
            KC_TRNS, KC_TRNS,
            KC_TRNS,
            KC_TRNS, KC_TRNS, KC_TRNS
